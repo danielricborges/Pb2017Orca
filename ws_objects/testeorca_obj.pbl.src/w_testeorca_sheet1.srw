@@ -6,7 +6,7 @@ end type
 end forward
 
 global type w_testeorca_sheet1 from w_testeorca_basesheet
-string Tag="Untitled for Sheet 1"
+string Tag="Programa 001"
 end type
 global w_testeorca_sheet1 w_testeorca_sheet1
 
