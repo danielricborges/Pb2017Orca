@@ -5,6 +5,8 @@ global type w_testeorca_frame from window
 end type
 type mdi_1 from mdiclient within w_testeorca_frame
 end type
+type cb_1 from commandbutton within w_testeorca_frame
+end type
 end forward
 
 global type w_testeorca_frame from window
@@ -29,6 +31,7 @@ event type integer ue_close ( )
 event type integer ue_print ( )
 event type integer ue_print_query ( )
 mdi_1 mdi_1
+cb_1 cb_1
 end type
 global w_testeorca_frame w_testeorca_frame
 
@@ -164,15 +167,36 @@ end event
 on w_testeorca_frame.create
 if this.MenuName = "m_testeorca_frame" then this.MenuID = create m_testeorca_frame
 this.mdi_1=create mdi_1
-this.Control[]={this.mdi_1}
+this.cb_1=create cb_1
+this.Control[]={this.mdi_1,&
+this.cb_1}
 end on
 
 on w_testeorca_frame.destroy
 if IsValid(MenuID) then destroy(MenuID)
 destroy(this.mdi_1)
+destroy(this.cb_1)
 end on
 
 type mdi_1 from mdiclient within w_testeorca_frame
 long BackColor=275287458
 end type
+
+type cb_1 from commandbutton within w_testeorca_frame
+integer x = 795
+integer y = 548
+integer width = 402
+integer height = 112
+integer taborder = 10
+integer textsize = -10
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "none"
+end type
+
+event clicked;open(w_teste02)
+end event
 
