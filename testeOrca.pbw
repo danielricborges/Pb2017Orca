@@ -2,3 +2,5 @@ Save Format v3.0(19990112)
 @begin Targets
  0 "testeorca.pbt";
 @end;
+DefaultTarget "testeorca.pbt";
+DefaultRemoteTarget "testeorca.pbt";

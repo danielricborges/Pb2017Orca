@@ -4,5 +4,5 @@ Save Format v3.0(19990112)
 @end;
 appname "testeorca";
 applib "testeorca.pbl";
-LibList "testeorca.pbl;testeorca_obj.pbl";
+LibList "testeorca.pbl;testeorca_obj.pbl;testeorca_obj2.pbl";
 type "pb";
